@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+
+<body>
+	<ul>
+		<li>apple</li>
+		<li>orange</li>
+		<li>banana</li>
+		<li>strawberry</li>
+	</ul>
+</body>
+
+</html>
+
+<script>
+	/* 
+	filter, includes, from을 사용해서 문자열 'e'가 포함된
+	노드로 구성된 배열을 만들어서 반환하기
+	*/
+	function print(){
+		let list = document.querySelectorAll('li');
+		let listArray = Array.from(list);
+	
+		for(let i of list){
+			console.log(i.innerText);
+		}
+		console.log('===============================');
+
+/*		let aaa = list.filter((v)=>{
+			return v.innerText.includes('e');
+		});
+		for(let a of aaa){
+			console.log(a.innerText);
+		}
+*/
+		console.log('===============================');
+//		console.log(list);
+//		console.log(listArray);
+		
+		let eArray = listArray.filter( v => {
+			return v.innerText.includes("e");
+		});
+		console.log(eArray);
+		console.log(eArray.length);
+		for(let i of listArray){
+			console.log(i.innerText);
+		}
+		for(let i of eArray){
+			console.log(i.innerText);
+		}
+	}
+	print();
+</script>
