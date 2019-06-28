@@ -1,0 +1,12 @@
+<html>
+
+	<div>Loren ipsum</div>
+
+</html>
+
+<script>
+	document.querySelector('div').addEventListener("click",function({type, target}){
+		console.log(type, target.tagName, target.innerText);
+		console.log(target);
+	});
+</script>
